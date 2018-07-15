@@ -418,7 +418,7 @@ pub fn hdr_size(s: Sds) -> libc::c_int {
     unsafe { sds_get_hdr_size(s) }
 }
 
-#[link(name = "redismodule", kind = "static")]
+#[link(name = "sds", kind = "static")]
 extern "C" {
     #[no_mangle]
     pub static SDS_NOINIT: *mut libc::c_char;
